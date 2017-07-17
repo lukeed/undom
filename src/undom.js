@@ -93,6 +93,10 @@ export default function undom() {
 			this.attributes = [];
 			this.__handlers = {};
 			this.style = {};
+			Object.defineProperty(this, 'id', {
+				set: val => { this.setAttribute('id', val); },
+				get: () => this.getAttribute('id')
+			});
 			Object.defineProperty(this, 'className', {
 				set: val => { this.setAttribute('class', val); },
 				get: () => this.getAttribute('class')
