@@ -3,9 +3,9 @@
   "amdName": "undom",
   "version": "0.3.3",
   "description": "Minimally viable DOM Document implementation.",
-  "main": "dist/undom.js",
   "minified:main": "dist/undom.min.js",
-  "jsnext:main": "src/undom.js",
+  "module": "dist/undom.es.js",
+  "main": "dist/undom.js",
   "scripts": {
     "build": "npm-run-all transpile minify size",
     "transpile": "rollup -c config/rollup.config.js",
