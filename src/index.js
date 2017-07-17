@@ -5,6 +5,7 @@ import {
 	findWhere,
 	createAttributeFilter
 } from './util';
+import filter from '@arr/filter';
 
 /*
 const NODE_TYPES = {
@@ -48,6 +49,12 @@ export default function undom() {
 		}
 		get lastChild() {
 			return this.childNodes[this.childNodes.length-1];
+		}
+		getElementById(str) {
+			return find(this.childNodes, o => (o.getAttribute('id') === str) && o);
+		}
+		getElementsByClassName(str) {
+			return filter(this.childNodes, o => ~(o.className || '').indexOf(str));
 		}
 		appendChild(child) {
 			this.insertBefore(child);
