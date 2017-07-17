@@ -1,33 +1,18 @@
-import path from 'path';
-import fs from 'fs';
-import buble from 'rollup-plugin-buble';
-// import babel from 'rollup-plugin-babel';
-
-let pkg = JSON.parse(fs.readFileSync('./package.json'));
+const node = require('rollup-plugin-node-resolve');
+const buble = require('rollup-plugin-buble');
+const pkg = require('../package');
 
 export default {
-	entry: pkg['jsnext:main'],
-	dest: pkg.main,
-	sourceMap: path.resolve(pkg.main),
-	moduleName: pkg.amdName,
-	format: 'umd',
-	exports: 'default',
+	sourceMap: true,
 	useStrict: false,
+	entry: 'src/index.js',
+	exports: 'default',
 	plugins: [
-		buble({
-			objectAssign: 'assign'
-		})
-		// babel({
-		// 	babelrc: false,
-		// 	comments: false,
-		// 	exclude: 'node_modules/**',
-		// 	presets: [
-		// 		'es2015-minimal-rollup',
-		// 		'stage-0'
-		// 	],
-		// 	plugins: [
-		// 		'transform-object-assign'
-		// 	]
-		// })
+		node({ jsnext:true }),
+		buble({ objectAssign:'assign' })
+	],
+	targets: [
+		{ dest:pkg.main, format:'umd', moduleName:pkg.amdName },
+		{ dest:pkg.module, format:'es' }
 	]
 };
