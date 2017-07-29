@@ -37,5 +37,9 @@
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0",
     "uglify-js": "^2.6.2"
+  },
+  "dependencies": {
+    "@arr/filter": "^1.0.0",
+    "@arr/find": "^1.0.0"
   }
 }
