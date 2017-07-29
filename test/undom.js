@@ -1,7 +1,8 @@
-import undom from '../src/undom';
-import chai, { expect } from 'chai';
-import { spy } from 'sinon';
-import sinonChai from 'sinon-chai';
+const chai = require('chai');
+const { spy } = require('sinon');
+const sinonChai = require('sinon-chai');
+const undom = require('../dist/undom');
+const expect = chai.expect;
 chai.use(sinonChai);
 
 describe('undom', () => {
