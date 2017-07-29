@@ -26,5 +26,5 @@ class Document extends Element {
 export default function () {
 	const document = new Document();
 	const defaultView = { document, Document, Node, Text, Element, SVGElement:Element, Event };
-	return Object.assign(document, { defaultView, createElement, createElementNS, createTextNode });
+	return Object.assign(document, defaultView, { defaultView, createElement, createElementNS, createTextNode });
 }
