@@ -1,7 +1,7 @@
-import Element from './element';
-import Event from './event';
-import Node from './node';
-import Text from './text';
+const Node = require('./node');
+const Element = require('./element');
+const Event = require('./event');
+const Text = require('./text');
 
 const createTextNode = str => new Text(str);
 const createElement = type => new Element(null, type.toUpperCase());
@@ -23,7 +23,7 @@ class Document extends Element {
 	}
 }
 
-export default function () {
+module.exports = function () {
 	const document = new Document();
 	const defaultView = { document, Document, Node, Text, Element, SVGElement:Element, Event };
 	return Object.assign(document, defaultView, { defaultView, createElement, createElementNS, createTextNode });

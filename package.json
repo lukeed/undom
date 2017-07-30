@@ -7,7 +7,6 @@
   "module": "dist/undom.es.js",
   "main": "dist/undom.js",
   "scripts": {
-    "build": "rollup -c",
     "test": "mocha test/**/*.js"
   },
   "keywords": [
@@ -27,16 +26,9 @@
   "homepage": "https://github.com/developit/undom",
   "devDependencies": {
     "chai": "^3.5.0",
-    "gzip-size-cli": "^1.0.0",
-    "mkdirp": "^0.5.1",
     "mocha": "^2.4.5",
-    "npm-run-all": "^2.3.0",
-    "pretty-bytes-cli": "^1.0.0",
-    "rollup": "^0.45.2",
-    "rollup-plugin-node-resolve": "^3.0.0",
     "sinon": "^1.17.4",
-    "sinon-chai": "^2.8.0",
-    "uglify-js": "^2.6.2"
+    "sinon-chai": "^2.8.0"
   },
   "dependencies": {
     "@arr/filter": "^1.0.0",

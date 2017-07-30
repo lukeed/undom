@@ -1,4 +1,4 @@
-export default class Event {
+class Event {
 	constructor(type, opts) {
 		this.type = type;
 		this.bubbles = !!opts.bubbles;
@@ -14,3 +14,5 @@ export default class Event {
 		this.defaultPrevented = true;
 	}
 }
+
+module.exports = Event;

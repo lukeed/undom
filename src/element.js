@@ -1,10 +1,10 @@
-import Node from './node';
-import filter from '@arr/filter';
-import { findWhere, toLower, splice, createAttributeFilter } from './util';
+const filter = require('@arr/filter');
+const { findWhere, toLower, splice, createAttributeFilter } = require('./util');
+const Node = require('./node');
 
 const isElement = el => el.nodeType === 1;
 
-export default class Element extends Node {
+class Element extends Node {
 	constructor(type, name) {
 		super(type || 1, name); // ELEMENT_NODE
 		this.attributes = [];
@@ -76,3 +76,5 @@ export default class Element extends Node {
 		return !event.defaultPrevented;
 	}
 }
+
+module.exports = Element;

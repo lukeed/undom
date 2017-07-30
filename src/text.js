@@ -1,6 +1,6 @@
-import Node from './node';
+const Node = require('./node');
 
-export default class Text extends Node {
+class Text extends Node {
 	constructor(text) {
 		super(3, '#text'); // TEXT_NODE
 		this.nodeValue = text;
@@ -12,3 +12,5 @@ export default class Text extends Node {
 		return this.nodeValue;
 	}
 }
+
+module.exports = Text;

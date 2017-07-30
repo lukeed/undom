@@ -1,10 +1,10 @@
-import find from '@arr/find';
-import filter from '@arr/filter';
-import { findWhere, toLower, splice } from './util';
+const find = require('@arr/find');
+const filter = require('@arr/filter');
+const { findWhere, toLower, splice } = require('./util');
 
 const getChild = (el, fn, isMany) => (isMany ? filter : find)(el.childNodes, fn) || null;
 
-export default class Node {
+class Node {
 	constructor(type, name) {
 		this.nodeType = type;
 		this.nodeName = name;
@@ -85,3 +85,5 @@ export default class Node {
 		}
 	}
 }
+
+module.exports = Node;

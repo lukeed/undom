@@ -1,7 +1,7 @@
 const chai = require('chai');
 const { spy } = require('sinon');
 const sinonChai = require('sinon-chai');
-const undom = require('../dist/undom');
+const undom = require('../src');
 const expect = chai.expect;
 chai.use(sinonChai);
 
