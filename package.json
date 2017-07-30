@@ -3,9 +3,9 @@
   "amdName": "undom",
   "version": "0.3.3",
   "description": "Minimally viable DOM Document implementation.",
-  "minified:main": "dist/undom.min.js",
-  "module": "dist/undom.es.js",
-  "main": "dist/undom.js",
+  "repository": "developit/undom",
+  "main": "src/index.js",
+  "license": "MIT",
   "scripts": {
     "test": "mocha test/**/*.js"
   },
@@ -14,16 +14,7 @@
     "document",
     "shim"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/developit/undom.git"
-  },
   "author": "Jason Miller <jason@developit.ca>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/developit/undom/issues"
-  },
-  "homepage": "https://github.com/developit/undom",
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.4.5",
