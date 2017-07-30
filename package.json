@@ -1,14 +1,16 @@
 {
   "name": "undom",
-  "amdName": "undom",
   "version": "0.3.3",
   "description": "Minimally viable DOM Document implementation.",
   "repository": "developit/undom",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
     "test": "mocha test/**/*.js"
   },
+  "files": [
+    "lib"
+  ],
   "keywords": [
     "dom",
     "document",
